@@ -1,46 +1,93 @@
-# slide-templates
-This repository contains templates for different presentation tools
+---
+marp: true
+theme: ewk-wa
+paginate: true
+date: today
+footer: 'Korngold-Werkausgabe | Names | Topic'
+---
 
-## Marp
+<!-- _class: title  -->
+<!-- paginate: false -->
+# Title
 
-### VS-Code
-1. Install [Marp plugin](https://marketplace.visualstudio.com/items/?itemName=marp-team.marp-vscode).
-1. Add marp settings from `settings.json.template` to local `.vscode/settings.json`.
-1. For an example of the common and custom functions use the `index.md` as a starting point.
+## Subtitle
 
-### Custom CSS
+---
+<!-- paginate: true -->
 
-#### Smaller font for descriptions/bibliographic information etc.
+# First Slide
 
-```html
+- First
+- Second
+- Third
+- [Jump to slide 4](#4)
+
+<!-- 
+I'm a spreakers note.
+-->
+
+---
+
+# Second Slide
+
+> What a wonderful quote.
 <p class="small">Description</p>
-```
 
-#### Audio Integration
+---
 
-```html
-<audio controls>
-  <source src="./audio/music.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-```
+# Table 
 
-#### Video Integration
-```html
+| Head1 | Head2 |
+|---------------|---|
+| Row 1 Col 1 | Row 1 Col 2 |
+| Row 2 Col 1 | Row 2 Col 2 |
+
+---
+
+# Image
+![Alt Description](./imgs/image.png)
+<p class="small">Description</p>
+
+---
+
+# Video
 <video controls>
   <source src="./video/video.mp4" type="video/mp4">
 </video>
-```
+<p class="small">Description</p>
 
-#### Split slides
+---
 
-The first option adds a class attribute to the section and splits the whole slide in to columns.
+# Audio
+ <audio controls>
+  <source src="./audio/music.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<p class="small">Description</p>
+
+---
+
+# Code
 
 ```html
-<!-- _class: split -->
+<html>
+    <h1>Heading</h1>
+    <p>Lorem impsum</p>
+</html>
 ```
 
-The second option defines two columns within a div.
+--- 
+<!-- _class: split -->
+
+# Split slide
+
+Split the whole slide in two equal parts
+
+---
+
+# Two cols layout
+
+Allows to add fixed columns
 
 <div class="cols-2">
     <div>
@@ -51,12 +98,15 @@ The second option defines two columns within a div.
     </div>
 </div>
 
-#### For Mermeid Support
+---
 
-- Add [markdown-mermaid](https://marketplace.visualstudio.com/items/?itemName=bierner.markdown-mermaid) plugin and 
+# Mermaid
+
+Preview only works in Obsidian.
+For usage in VS-Code: 
+- [markdown-mermaid](https://marketplace.visualstudio.com/items/?itemName=bierner.markdown-mermaid) and 
 - disable security settings for preview.
 
-```html
 <div class="mermaid">
 classDiagram
     class Work
@@ -108,9 +158,7 @@ classDiagram
 	class Item
 	Item --> Manifestation : isItemOf
 </div>
-``` 
 
-```html
 <!-- Put this script at the end of Markdown file. -->
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -118,4 +166,3 @@ mermaid.initialize({ startOnLoad: true });
 
 window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
 </script>
-```

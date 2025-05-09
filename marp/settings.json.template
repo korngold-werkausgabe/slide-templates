@@ -1,0 +1,9 @@
+{
+    "markdown.marp.themes": [
+      "https://example.com/foo/bar/custom-theme.css",
+      "./themes/ewk-wa.css"
+    ],
+    "markdown.marp.html": "all",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "nuxt.isNuxtApp": false,
+  }

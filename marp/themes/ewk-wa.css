@@ -1,0 +1,194 @@
+/**
+ * @theme ewk-wa
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+
+ @import 'uncover';
+
+ html{
+   font-size: 100%;
+ }
+ section {
+   font-family: "Montserrat";
+   font-weight: 300;
+   font-size: 1.5em;
+   background-color: #151928;
+   background-image: url('./imgs/logo_ewk-wa.png');
+   background-position: 1em top, 0 0, 0 0, 0 0, 0 0;
+     background-repeat: no-repeat, repeat, repeat, repeat, repeat;
+     background-size: 6em, auto, auto, auto, auto;
+   color: lightgray;
+ }
+ 
+ section.title {
+   background-image: url('./imgs/logo_ewk-wa.png'), linear-gradient(
+       109deg,
+       transparent 0%,
+       transparent 5%,
+       rgba(149, 149, 149, 0.04) 5%,
+       rgba(149, 149, 149, 0.04) 38%,
+       transparent 38%,
+       transparent 100%
+     ),
+     linear-gradient(
+       324deg,
+       transparent 0%,
+       transparent 31%,
+       rgba(149, 149, 149, 0.04) 31%,
+       rgba(149, 149, 149, 0.04) 99%,
+       transparent 99%,
+       transparent 100%
+     ),
+     linear-gradient(
+       259deg,
+       transparent 0%,
+       transparent 11%,
+       rgba(149, 149, 149, 0.04) 11%,
+       rgba(149, 149, 149, 0.04) 57%,
+       transparent 57%,
+       transparent 100%
+     ),
+     linear-gradient(
+       221deg,
+       transparent 0%,
+       transparent 11%,
+       rgba(149, 149, 149, 0.04) 11%,
+       rgba(149, 149, 149, 0.04) 57%,
+       transparent 57%,
+       transparent 100%
+     );
+ }
+ 
+ section.title > h1 {
+ font-family: "Bauer Grotesk W1G", "Fairplay";
+   color: #d1b058;
+ }
+ 
+ section.title > h2 {
+   font-family: "Montserrat";
+   font-size: 1.6em;
+   color: #E9D9AF;
+ }
+ 
+ section.small {
+   font-size: 1.6rem;
+ }
+ 
+ section.left {
+   text-align: left;
+   padding: 5em;
+ }
+ 
+ section.left ul, section.left ol {
+   float: left;
+   margin-left: 0;
+ }
+ 
+ section.split{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: auto;
+   grid-gap: 2em;
+ }
+ 
+ section.split code {
+   max-height: 50em;
+ }
+ 
+ h1 { 
+   font-size: 2.3em; 
+   font-weight: 300;
+   color: #d1b058;
+   font-family: "Playfair Display";
+   letter-spacing: 0.1rem;
+ }
+ h2 { 
+   font-size: 1.6em; 
+   font-weight: 100;
+   color: #E9D9AF;
+   font-family: "Playfair Display";
+   letter-spacing: 0.1em;
+ }
+ h3 {
+   font-size: 1.5em;
+   font-weight: 400;
+ }
+ a{
+   color: #414A76;
+ }
+ 
+ ul ul{
+   margin-top: 0.5em;
+ }
+ 
+ li{
+   margin-bottom: 0.3em;
+ }
+
+
+ p.small {
+     font-size: 0.75em;
+   }
+   
+ iframe {
+   height: 14em;
+   width: 100%;
+ }
+ 
+ ul.cols-2  {
+   columns: 2;
+ }
+ 
+ ul.small {
+   font-size: 0.9em;
+ }
+ 
+ div.cols-2 {
+   columns: 2;
+ }
+ 
+ code {
+   max-height: 30em;
+   max-width: 50em;
+   font-size: 0.9em;
+   font-family: "FuraMono NF";
+   overflow-y: auto;
+   overflow-x: hidden;
+ }
+ 
+ .border{
+   border: 0.8px solid #d1b058;
+   margin: 1em;
+   padding: 0.5em;
+ }
+ ul.hidden {
+   list-style-type: none;
+ }
+ 
+ img{
+   max-height: 40vh;
+ }
+ 
+ video {
+   max-height: 40vh;
+ }
+ 
+ footer {
+   position: absolute;
+   bottom: 30px;
+   left: 50px;
+   right: 50px;
+   height: 20px;
+   color: lightgray;
+   font-weight: 400;
+   font-size: 0.6em;
+   letter-spacing: .4em;;
+ }
+ 
+ section::after {
+   font-weight: 200;
+   color: #E9D9AF;
+   content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+   text-shadow: none;
+ }
