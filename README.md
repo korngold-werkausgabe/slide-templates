@@ -3,6 +3,12 @@ This repository contains templates for different presentation tools
 
 ## Marp
 
+### Obsidian
+
+1. Install Marp Slides Plugin.
+1. Clone repository to vault or link to templates folder: `ln -s /path/to/repo /path/in/vault`.
+1. Add (relative) `path/in/vault/` in Marp Slides Config: `Preferences` > `Marp Slides` > `Theme Path`
+
 ### VS-Code
 1. Install [Marp plugin](https://marketplace.visualstudio.com/items/?itemName=marp-team.marp-vscode).
 1. Add marp settings from `settings.json.template` to local `.vscode/settings.json`.
