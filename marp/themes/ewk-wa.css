@@ -95,6 +95,10 @@
  section.split code {
    max-height: 50em;
  }
+
+ header{
+  display: flex;
+ }
  
  h1 { 
    font-size: 2.3em; 
@@ -126,7 +130,6 @@
    margin-bottom: 0.3em;
  }
 
-
  p.small {
      font-size: 0.75em;
    }
@@ -146,15 +149,6 @@
  
  div.cols-2 {
    columns: 2;
- }
- 
- code {
-   max-height: 30em;
-   max-width: 50em;
-   font-size: 0.9em;
-   font-family: "FuraMono NF";
-   overflow-y: auto;
-   overflow-x: hidden;
  }
  
  .border{
@@ -192,3 +186,21 @@
    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
    text-shadow: none;
  }
+
+img.kroki {
+  max-height: 60vh;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 1em;
+  background-color: rgba(255, 255, 255);
+}
+
+code {
+  font-family: "FuraMono NF", Courier, monospace;
+  font-size: 0.9em;
+  color: #E9D9AF;
+  background-color: #151928;
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
